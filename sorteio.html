@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+//teste do curso alura
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia() {
+
+        return Math.round(Math.random() * 100);
+    }   
+
+    var numeroPensado = sorteia();
+
+    var chute = parseInt(prompt("A divinhe o numero que estou pensando?"));
+    if(chute == numeroPensado) {
+
+        mostra(" Genial! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+
+    var contador = 1;
+
+while( contador <= 10 ) {
+
+    mostra("Tente outra vez!!!!");
+    contador = contador + 1;
+}
+    }
+</script>
